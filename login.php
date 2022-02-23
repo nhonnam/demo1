@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
 		    die();
         }
     }
-    //hihihi
     else{
         $sql = "SELECT * FROM Staff WHERE usernam = '".$uname."' AND password = '".$passwd."'";
         $data = pg_query($dbconn,$sql); 
