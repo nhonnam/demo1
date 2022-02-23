@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
         $sql = "SELECT * FROM Director WHERE username = '".$uname."' AND password = '".$passwd."'";
         $data = pg_query($dbconn,$sql);
         $login_check = pg_num_rows($data);
-        if($login_check > 0){
+        if($login_check == 1){
             header('Location: allshops.php');
         }   
         else{
